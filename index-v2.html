@@ -329,10 +329,8 @@ transform:scale(1);
 
 <div id="loader">
 
-<video autoplay muted playsinline id="introVideo">
-
-<source src="Yadgar-e-Ahl-e-Bait Production.mp4" type="video/mp4">
-
+<video id="introVideo" autoplay muted playsinline preload="auto">
+    <source src="Yadgar-e-Ahl-e-Bait Production.mp4" type="video/mp4">
 </video>
 
 </div>
@@ -683,27 +681,27 @@ font-size:30px;
 </style>
 
 <script>
+window.onload = function () {
 
-window.onload = function(){
+const loader = document.getElementById("loader");
+const video = document.getElementById("introVideo");
 
-const loader=document.getElementById("loader");
-const video=document.getElementById("introVideo");
+video.play();
 
 setTimeout(function(){
 
+loader.style.transition="opacity 1s ease";
 loader.style.opacity="0";
 
 setTimeout(function(){
 
 loader.style.display="none";
-video.pause();
 
 },1000);
 
-},3000);
+},4000);
 
 };
-
 </script>
 
 </body>
