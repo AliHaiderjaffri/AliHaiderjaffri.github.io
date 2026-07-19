@@ -1,1 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Videos | Ali Haider Jaffri Official</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+
+background:
+linear-gradient(rgba(0,0,0,.82),rgba(0,0,0,.82)),
+url("karbala-night.png");
+
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+color:#fff;
+
+}
+
+nav{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+padding:18px 8%;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+background:rgba(0,0,0,.45);
+
+backdrop-filter:blur(15px);
+
+z-index:999;
+
+}
+
+.logo{
+
+font-size:30px;
+
+font-weight:800;
+
+color:#FFD700;
+
+}
+
+nav ul{
+
+display:flex;
+
+gap:30px;
+
+list-style:none;
+
+}
+
+nav a{
+
+color:#fff;
+
+text-decoration:none;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+nav a:hover{
+
+color:#FFD700;
+
+}
+
+header{
+
+padding-top:140px;
+
+padding-bottom:60px;
+
+text-align:center;
+
+}
+
+header h1{
+
+font-size:60px;
+
+color:#FFD700;
+
+margin-bottom:20px;
+
+text-shadow:0 0 15px gold;
+
+}
+
+header p{
+
+font-size:22px;
+
+color:#eee;
+
+}
+
+#videos{
+
+max-width:1300px;
+
+margin:auto;
+
+padding:60px 6%;
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+
+gap:35px;
+
+}
+
+.video-card{
+
+background:rgba(255,255,255,.08);
+
+border-radius:18px;
+
+overflow:hidden;
+
+backdrop-filter:blur(10px);
+
+transition:.4s;
+
+}
+
+.video-card:hover{
+
+transform:translateY(-8px);
+
+box-shadow:0 0 25px rgba(255,215,0,.35);
+
+}
+
+.video-card img{
+
+width:100%;
+
+display:block;
+
+}
+
+.video-card h3{
+
+padding:18px;
+
+font-size:20px;
+
+line-height:1.5;
+
+}
+
+.watch{
+
+display:block;
+
+margin:20px;
+
+padding:14px;
+
+text-align:center;
+
+background:#FFD700;
+
+color:#000;
+
+font-weight:bold;
+
+border-radius:30px;
+
+text-decoration:none;
+
+}
+
+.watch:hover{
+
+background:#fff;
+
+}
+
+.loading{
+
+text-align:center;
+
+font-size:26px;
+
+padding:100px;
+
+color:#FFD700;
+
+}
+
+@media(max-width:768px){
+
+header h1{
+
+font-size:40px;
+
+}
+
+header p{
+
+font-size:18px;
+
+}
+
+nav{
+
+flex-direction:column;
+
+padding:15px;
+
+}
+
+nav ul{
+
+margin-top:15px;
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+gap:15px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">
+
+Ali Haider Jaffri
+
+</div>
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="videos.html">Videos</a></li>
+
+<li><a href="gallery.html">Gallery</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
+
+</nav>
+
+<header>
+
+<h1>Latest Videos</h1>
+
+<p>
+
+Official YouTube Playlist
+
+</p>
+
+</header>
+
+<div id="videos">
+
+<div class="loading">
+
+Loading Videos...
+
+</div>
+
+</div>
+  <!-- Part 2 (Paste this immediately after the loading div from Part 1) -->
+
+<script>
+
+const API_KEY = "PASTE_YOUR_YOUTUBE_API_KEY_HERE";
+
+const PLAYLIST_ID = "PLQ4-wKg7sUzM";
+
+const MAX_RESULTS = 20;
+
+async function loadVideos(){
+
+const container=document.getElementById("videos");
+
+container.innerHTML="<div class='loading'>Loading Videos...</div>";
+
+try{
+
+const response=await fetch(
+
+`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=${MAX_RESULTS}&playlistId=${PLAYLIST_ID}&key=${API_KEY}`
+
+);
+
+const data=await response.json();
+
+container.innerHTML="";
+
+if(!data.items || data.items.length===0){
+
+container.innerHTML="<div class='loading'>No videos found.</div>";
+
+return;
+
+}
+
+data.items.forEach(video=>{
+
+const title=video.snippet.title;
+
+const thumbnail=video.snippet.thumbnails.high.url;
+
+const videoId=video.snippet.resourceId.videoId;
+
+container.innerHTML+=`
+
+<div class="video-card">
+
+<img src="${thumbnail}" alt="${title}">
+
+<h3>${title}</h3>
+
+<a class="watch"
+
+href="https://www.youtube.com/watch?v=${videoId}"
+
+target="_blank">
+
+▶ Watch Video
+
+</a>
+
+</div>
+
+`;
+
+});
+
+}catch(error){
+
+container.innerHTML="<div class='loading'>Failed to load videos.</div>";
+
+console.log(error);
+
+}
+
+}
+
+loadVideos();
+
+</script>
+  
