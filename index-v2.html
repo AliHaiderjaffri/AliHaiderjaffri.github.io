@@ -684,8 +684,10 @@ font-size:30px;
 
 <script>
 
-const loader = document.getElementById("loader");
-const video = document.getElementById("introVideo");
+window.onload = function(){
+
+const loader=document.getElementById("loader");
+const video=document.getElementById("introVideo");
 
 setTimeout(function(){
 
@@ -694,12 +696,13 @@ loader.style.opacity="0";
 setTimeout(function(){
 
 loader.style.display="none";
-
 video.pause();
 
-},800);
+},1000);
 
-},5000);
+},3000);
+
+};
 
 </script>
 
