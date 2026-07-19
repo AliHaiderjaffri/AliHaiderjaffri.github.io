@@ -9,6 +9,23 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
+  header div{
+animation:fadeUp 1.8s ease;
+}
+
+@keyframes fadeUp{
+
+from{
+opacity:0;
+transform:translateY(40px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
 
 *{
 margin:0;
@@ -300,11 +317,33 @@ width:100%;
 height:100%;
 object-fit:cover;
 }
+  .stars{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+pointer-events:none;
+z-index:-1;
+background:
+radial-gradient(2px 2px at 20% 30%,#fff,transparent),
+radial-gradient(2px 2px at 70% 20%,#fff,transparent),
+radial-gradient(2px 2px at 40% 80%,#fff,transparent),
+radial-gradient(2px 2px at 90% 60%,#fff,transparent),
+radial-gradient(2px 2px at 10% 70%,#fff,transparent);
+animation:twinkle 4s infinite alternate;
+}
+
+@keyframes twinkle{
+0%{opacity:.3;}
+100%{opacity:1;}
+}
 </style>
 
 </head>
 
 <body>
+  <div class="stars"></div>
   <div id="loader">
 
 <video id="introVideo" autoplay muted playsinline>
