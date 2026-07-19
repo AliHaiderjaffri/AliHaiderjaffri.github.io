@@ -1,1 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ali Haider Jaffri | Official Islamic Artist</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#050505;
+color:#fff;
+overflow-x:hidden;
+}
+
+/* Loader */
+
+#loader{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:#000;
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:999999;
+}
+
+#loader video{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+/* Stars */
+
+.stars{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+pointer-events:none;
+background:url("https://www.transparenttextures.com/patterns/stardust.png");
+opacity:.35;
+animation:moveStars 90s linear infinite;
+z-index:-2;
+}
+
+@keyframes moveStars{
+
+from{
+transform:translateY(0);
+}
+
+to{
+transform:translateY(-1000px);
+}
+
+}
+
+/* Navbar */
+
+nav{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+padding:18px 8%;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+background:rgba(0,0,0,.35);
+
+backdrop-filter:blur(12px);
+
+z-index:999;
+
+}
+
+.logo{
+
+font-size:28px;
+
+font-weight:700;
+
+color:#FFD700;
+
+text-shadow:0 0 15px gold;
+
+}
+
+nav ul{
+
+display:flex;
+
+gap:30px;
+
+list-style:none;
+
+}
+
+nav a{
+
+text-decoration:none;
+
+color:#fff;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+nav a:hover{
+
+color:#FFD700;
+
+}
+
+/* Hero */
+
+header{
+
+height:100vh;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+text-align:center;
+
+padding:20px;
+
+background:
+
+linear-gradient(rgba(0,0,0,.82),rgba(0,0,0,.78)),
+
+url('karbala-night.png.png');
+
+background-size:cover;
+
+background-position:center;
+
+background-attachment:fixed;
+
+}
+
+.hero{
+
+animation:fadeUp 1.8s ease;
+
+}
+
+.profile{
+
+width:220px;
+
+height:220px;
+
+border-radius:50%;
+
+object-fit:cover;
+
+border:6px solid #FFD700;
+
+box-shadow:
+
+0 0 20px gold,
+
+0 0 45px rgba(255,215,0,.6);
+
+margin-bottom:25px;
+
+transition:.4s;
+
+}
+
+.profile:hover{
+
+transform:scale(1.05);
+
+}
+
+.hero h1{
+
+font-size:65px;
+
+color:#FFD700;
+
+text-shadow:0 0 20px gold;
+
+margin-bottom:10px;
+
+}
+
+.hero h3{
+
+font-size:28px;
+
+margin-bottom:20px;
+
+font-weight:300;
+
+}
+
+.hero p{
+
+max-width:700px;
+
+margin:auto;
+
+line-height:1.8;
+
+color:#ddd;
+
+}
+
+.btn{
+
+display:inline-block;
+
+margin-top:35px;
+
+padding:16px 40px;
+
+background:#FFD700;
+
+color:#000;
+
+font-weight:bold;
+
+text-decoration:none;
+
+border-radius:40px;
+
+transition:.4s;
+
+}
+
+.btn:hover{
+
+background:#fff;
+
+transform:translateY(-5px);
+
+}
+
+section{
+
+padding:90px 10%;
+
+}
+
+.title{
+
+text-align:center;
+
+font-size:40px;
+
+color:#FFD700;
+
+margin-bottom:50px;
+
+}
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(50px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="loader">
+
+<video autoplay muted playsinline id="introVideo">
+
+<source src="Yadgar-e-Ahl-e-Bait Production.mp4" type="video/mp4">
+
+</video>
+
+</div>
+
+<div class="stars"></div>
+
+<nav>
+
+<div class="logo">
+
+Ali Haider Jaffri
+
+</div>
+
+<ul>
+
+<li><a href="#">Home</a></li>
+
+<li><a href="#about">About</a></li>
+
+<li><a href="#services">Services</a></li>
+
+<li><a href="#youtube">YouTube</a></li>
+
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+</nav>
+
+<header>
+
+<div class="hero">
+
+<img src="WhatsApp%20Image%202026-07-01%20at%202.57.23%20PM.jpeg" class="profile">
+
+<h1>Ali Haider Jaffri</h1>
+
+<h3>Official Islamic Artist</h3>
+
+<p>
+
+Reciter of Nohay, Naat & Qasida dedicated to the love of
+Ahl-ul-Bait (A.S).
+
+</p>
+
+<a href="https://www.youtube.com/@alihaiderjaffriofficial110" class="btn" target="_blank">
+
+Watch on YouTube
+
+</a>
+
+</div>
+
+</header>
+  <!-- ABOUT -->
+
+<section id="about">
+
+<h2 class="title">About Me</h2>
+
+<div class="card">
+
+<p>
+
+Assalam-o-Alaikum.
+
+I am <b>Ali Haider Jaffri</b>, an Official Islamic Artist from Pakistan.
+
+I recite <b>Nohay, Naat, Manqabat and Qasida</b> with devotion to the Holy Prophet (ﷺ) and Ahl-ul-Bait (A.S).
+
+My mission is to spread the message of Imam Hussain (A.S.), Karbala and the love of Ahl-ul-Bait (A.S.) through my voice.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- SERVICES -->
+
+<section id="services">
+
+<h2 class="title">Services</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>🎤 Nohay</h3>
+
+<p>Professional Noha Recitation for Muharram Programs.</p>
+
+</div>
+
+<div class="card">
+
+<h3>🤲 Naat</h3>
+
+<p>Beautiful Naat Recitation in praise of Holy Prophet Muhammad ﷺ.</p>
+
+</div>
+
+<div class="card">
+
+<h3>🕌 Qasida</h3>
+
+<p>Islamic Qasida & Manqabat Recitation.</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- YOUTUBE -->
+
+<section id="youtube">
+
+<h2 class="title">Official YouTube Channel</h2>
+
+<div class="card" style="text-align:center;">
+
+<a class="btn"
+
+href="https://www.youtube.com/@alihaiderjaffriofficial110"
+
+target="_blank">
+
+Visit My YouTube Channel
+
+</a>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<h2 class="title">Contact Me</h2>
+
+<div class="card">
+
+<p><b>📞 Phone:</b> +92 335 0431414</p>
+
+<br>
+
+<p><b>📧 Email:</b> alihaiderjaffri5@gmail.com</p>
+
+<br>
+
+<p>
+
+<b>▶ YouTube:</b>
+
+<a href="https://www.youtube.com/@alihaiderjaffriofficial110"
+
+target="_blank"
+
+style="color:#FFD700;">
+
+Ali Haider Jaffri Official
+
+</a>
+
+</p>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+
+© 2026 Ali Haider Jaffri Official
+
+<br><br>
+
+Designed by Yadgar-e-Ahl-e-Bait Production
+
+</p>
+
+</footer>
+
+<style>
+
+.cards{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+gap:30px;
+
+}
+
+.card{
+
+background:rgba(255,255,255,.08);
+
+padding:30px;
+
+border-radius:20px;
+
+backdrop-filter:blur(10px);
+
+border:1px solid rgba(255,255,255,.15);
+
+box-shadow:0 0 20px rgba(0,0,0,.25);
+
+transition:.4s;
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+
+border-color:#FFD700;
+
+box-shadow:0 0 30px rgba(255,215,0,.4);
+
+}
+
+footer{
+
+padding:35px;
+
+text-align:center;
+
+background:#000;
+
+color:#aaa;
+
+}
+
+</style>
+  <!-- Floating WhatsApp -->
+
+<a href="https://wa.me/923350431414"
+class="whatsapp"
+target="_blank">
+
+💬
+
+</a>
+
+<style>
+
+.whatsapp{
+
+position:fixed;
+
+bottom:25px;
+
+right:25px;
+
+width:65px;
+
+height:65px;
+
+background:#25D366;
+
+border-radius:50%;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:32px;
+
+text-decoration:none;
+
+color:#fff;
+
+box-shadow:0 0 20px rgba(37,211,102,.7);
+
+transition:.4s;
+
+z-index:9999;
+
+}
+
+.whatsapp:hover{
+
+transform:scale(1.1);
+
+box-shadow:0 0 35px #25D366;
+
+}
+
+@media(max-width:768px){
+
+.hero h1{
+
+font-size:42px;
+
+}
+
+.hero h3{
+
+font-size:22px;
+
+}
+
+.profile{
+
+width:170px;
+
+height:170px;
+
+}
+
+nav{
+
+padding:15px;
+
+flex-direction:column;
+
+}
+
+nav ul{
+
+margin-top:15px;
+
+gap:15px;
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+}
+
+.title{
+
+font-size:30px;
+
+}
+
+}
+
+</style>
+
+<script>
+
+const loader=document.getElementById("loader");
+
+const video=document.getElementById("introVideo");
+
+video.onended=function(){
+
+loader.style.opacity="0";
+
+setTimeout(function(){
+
+loader.style.display="none";
+
+},800);
+
+};
+
+</script>
+
+</body>
+</html>
