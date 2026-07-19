@@ -3,21 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Ali Haider Jaffri | Official Islamic Artist</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:'Poppins',sans-serif;
+}
+
+html{
 scroll-behavior:smooth;
 }
 
 body{
-background:#061b17;
+background:#071b17;
 color:#fff;
 }
 
@@ -27,29 +32,40 @@ display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
-background:
-linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
-url('https://images.unsplash.com/photo-1542810634-71277d95dcbb?auto=format&fit=crop&w=1600&q=80');
+padding:20px;
+background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+url('https://images.unsplash.com/photo-1519817650390-64a93db51149?auto=format&fit=crop&w=1600&q=80');
 background-size:cover;
 background-position:center;
-padding:20px;
 }
 
-.hero h1{
-font-size:60px;
+.profile{
+width:180px;
+height:180px;
+border-radius:50%;
+border:5px solid #d4af37;
+object-fit:cover;
+box-shadow:0 0 30px #d4af37;
+margin-bottom:25px;
+}
+
+h1{
+font-size:55px;
 color:#d4af37;
 }
 
-.hero h3{
-margin-top:15px;
-font-size:28px;
+h2{
+margin-top:10px;
+font-weight:400;
 }
 
-.hero p{
+p{
 margin-top:20px;
 font-size:18px;
-max-width:700px;
 line-height:1.8;
+max-width:700px;
+margin-left:auto;
+margin-right:auto;
 }
 
 .btn{
@@ -59,29 +75,29 @@ padding:15px 35px;
 background:#d4af37;
 color:#000;
 text-decoration:none;
-font-weight:bold;
 border-radius:40px;
-transition:.3s;
+font-weight:bold;
+transition:.4s;
 }
 
 .btn:hover{
-transform:scale(1.05);
+transform:scale(1.06);
 }
 
 section{
-padding:80px 10%;
+padding:90px 10%;
 }
 
 .title{
 text-align:center;
-font-size:40px;
 color:#d4af37;
-margin-bottom:40px;
+font-size:42px;
+margin-bottom:50px;
 }
 
 .cards{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 gap:25px;
 }
 
@@ -89,46 +105,53 @@ gap:25px;
 background:#0d2d27;
 padding:30px;
 border-radius:15px;
+transition:.4s;
 text-align:center;
-transition:.3s;
 }
 
 .card:hover{
-transform:translateY(-10px);
+transform:translateY(-8px);
 }
 
-.card h2{
+.card h3{
 color:#d4af37;
 margin-bottom:15px;
 }
 
 footer{
-background:#04100d;
-padding:30px;
+background:#04110d;
+padding:40px;
 text-align:center;
-color:#bbb;
 }
+
 </style>
+
 </head>
 
 <body>
 
 <header>
 
-<div class="hero">
+<div>
+
+<img src="profile.jpg" class="profile">
 
 <h1>Ali Haider Jaffri</h1>
 
-<h3>Official Islamic Artist</h3>
+<h2>Official Islamic Artist</h2>
 
 <p>
+
 Reciter of Nohay, Naat & Qasida.
-Dedicated to spreading the love of
+Dedicated to spreading the message of
 Ahlul Bayt (A.S.) through heartfelt recitations.
+
 </p>
 
-<a href="#about" class="btn">
-Explore
+<a class="btn" href="#about">
+
+Explore Website
+
 </a>
 
 </div>
@@ -137,36 +160,46 @@ Explore
 
 <section id="about">
 
-<h1 class="title">About Me</h1>
+<h2 class="title">
+
+About Me
+
+</h2>
 
 <div class="cards">
 
 <div class="card">
 
-<h2>Nohay</h2>
+<h3>Nohay</h3>
 
 <p>
-Heart-touching Noha recitations dedicated to Imam Hussain (A.S.).
+
+Powerful and emotional Noha recitations.
+
 </p>
 
 </div>
 
 <div class="card">
 
-<h2>Naat</h2>
+<h3>Naat</h3>
 
 <p>
-Beautiful Naat recitations in praise of Prophet Muhammad ﷺ.
+
+Beautiful praise of Prophet Muhammad ﷺ.
+
 </p>
 
 </div>
 
 <div class="card">
 
-<h2>Qasida</h2>
+<h3>Qasida</h3>
 
 <p>
-Traditional Islamic Qasida performed with devotion and respect.
+
+Traditional Islamic Qasida recitations.
+
 </p>
 
 </div>
@@ -174,18 +207,112 @@ Traditional Islamic Qasida performed with devotion and respect.
 </div>
 
 </section>
-  <section>
+<section>
 
-<h1 class="title">Mission</h1>
+<h2 class="title">My Mission</h2>
 
 <div class="card">
 
-<p style="font-size:18px;line-height:1.8;">
-My mission is to spread the message of Islam,
-love of Prophet Muhammad ﷺ and Ahlul Bayt (A.S.)
-through Nohay, Naat and Qasida recitations,
-bringing hearts closer to faith and spirituality.
+<p style="font-size:18px;line-height:1.9;">
+
+My mission is to spread the message of
+Islam, the love of Prophet Muhammad ﷺ,
+and the teachings of Ahlul Bayt (A.S.)
+through Nohay, Naat and Qasida recitations.
+
+May every recitation bring hearts closer
+to faith, unity and peace.
+
 </p>
+
+</div>
+
+</section>
+
+<section id="media">
+
+<h2 class="title">Official Media</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>🎬 YouTube Channel</h3>
+
+<p>
+
+Watch my latest Nohay, Naat and Qasida.
+
+</p>
+
+<a class="btn"
+href="https://www.youtube.com/@alihaiderjaffriofficial110"
+target="_blank">
+
+Visit YouTube
+
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>📱 WhatsApp</h3>
+
+<p>
+
+Book Programs & Contact Directly
+
+</p>
+
+<a class="btn"
+href="https://wa.me/923350431414"
+target="_blank">
+
+Chat Now
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+<section id="contact">
+
+<h2 class="title">Contact Me</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>📞 Phone</h3>
+
+<p>
++92 335 0431414
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>📧 Email</h3>
+
+<p>
+Coming Soon
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>📍 Country</h3>
+
+<p>
+Pakistan
+</p>
+
+</div>
 
 </div>
 
@@ -193,29 +320,21 @@ bringing hearts closer to faith and spirituality.
 
 <section>
 
-<h1 class="title">Follow Me</h1>
-
-<div class="cards">
+<h2 class="title">Message</h2>
 
 <div class="card">
 
-<h2>YouTube</h2>
+<p style="font-size:18px;line-height:1.9;">
 
-<p>Official YouTube Channel</p>
+"Every recitation is a humble effort to spread
+the love of Allah, Prophet Muhammad ﷺ,
+and Ahlul Bayt (A.S.).
 
-<a class="btn" href="#">Coming Soon</a>
+May Allah accept this small service and bless
+everyone who listens with faith, peace and
+guidance."
 
-</div>
-
-<div class="card">
-
-<h2>WhatsApp</h2>
-
-<p>Contact For Programs</p>
-
-<a class="btn" href="#">Coming Soon</a>
-
-</div>
+</p>
 
 </div>
 
@@ -223,14 +342,20 @@ bringing hearts closer to faith and spirituality.
 
 <footer>
 
-<h2 style="color:#d4af37;">Ali Haider Jaffri</h2>
+<h2 style="color:#d4af37;">
+Ali Haider Jaffri
+</h2>
 
-<p style="margin-top:10px;">
+<p style="margin-top:15px;">
 Official Islamic Artist
 </p>
 
 <p style="margin-top:10px;">
-© 2026 All Rights Reserved
+Nohay • Naat • Qasida
+</p>
+
+<p style="margin-top:20px;">
+© 2026 Ali Haider Jaffri. All Rights Reserved.
 </p>
 
 </footer>
@@ -238,4 +363,3 @@ Official Islamic Artist
 </body>
 
 </html>
-
