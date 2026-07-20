@@ -148,7 +148,7 @@ color:#FFD700;
 
 header{
 
-min-height:100vh;
+height:100vh;
 
 display:flex;
 
@@ -158,41 +158,29 @@ align-items:center;
 
 text-align:center;
 
-padding:140px 20px 80px;
+padding:20px;
 
 background:
+
 linear-gradient(rgba(0,0,0,.78),rgba(0,0,0,.82)),
+
 url("karbala-night.png.png");
 
 background-size:cover;
 
 background-position:center;
 
-background-repeat:no-repeat;
-
 background-attachment:fixed;
 
 }
+
 .hero{
-
-min-height:100vh;
-
-display:flex;
-
-flex-direction:column;
-
-justify-content:center;
-
-align-items:center;
-
-text-align:center;
-
-padding:180px 20px 100px;
 
 animation:fadeUp 1.8s ease;
 
 }
-  .profile{
+
+.profile{
 
 width:240px;
 
@@ -205,18 +193,17 @@ object-fit:cover;
 border:6px solid #FFD700;
 
 box-shadow:
+
 0 0 25px gold,
+
 0 0 60px rgba(255,215,0,.6);
 
-margin-top:30px;
-
 margin-bottom:30px;
-
-display:block;
 
 transition:.5s;
 
 }
+
 .profile:hover{
 
 transform:scale(1.05);
@@ -225,32 +212,723 @@ transform:scale(1.05);
 
 .hero h1{
 
-font-size:72px;
+font-size:78px;
 
 font-weight:800;
 
-line-height:1.2;
-
-margin-top:10px;
-
-margin-bottom:15px;
+letter-spacing:2px;
 
 color:#FFD700;
 
 text-shadow:
+
 0 0 15px gold,
+
 0 0 40px rgba(255,215,0,.8);
 
 }
 
 .hero h3{
 
-font-size:30px;
+font-size:34px;
 
 font-weight:600;
 
-margin-bottom:25px;
+margin-top:10px;
 
+margin-bottom:20px;
+
+}
+
+.hero p{
+
+font-size:22px;
+
+font-weight:500;
+
+line-height:1.8;
+
+max-width:900px;
+
+margin:auto;
+
+color:#f2f2f2;
+
+}
+
+.btn{
+
+display:inline-block;
+
+margin-top:35px;
+
+padding:16px 45px;
+
+border-radius:50px;
+
+background:#FFD700;
+
+color:#000;
+
+font-weight:700;
+
+text-decoration:none;
+
+transition:.4s;
+
+}
+
+.btn:hover{
+
+transform:translateY(-6px);
+
+background:#fff;
+
+}
+
+section{
+
+padding:100px 10%;
+
+}
+
+.title{
+
+text-align:center;
+
+font-size:42px;
+
+color:#FFD700;
+
+margin-bottom:50px;
+
+text-shadow:0 0 15px gold;
+
+}
+
+.card{
+
+background:rgba(255,255,255,.08);
+
+padding:35px;
+
+border-radius:22px;
+
+backdrop-filter:blur(12px);
+
+border:1px solid rgba(255,255,255,.12);
+
+transition:.4s;
+
+box-shadow:0 0 25px rgba(0,0,0,.25);
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+
+border-color:#FFD700;
+
+box-shadow:0 0 35px rgba(255,215,0,.4);
+
+}
+
+.cards{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+}
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(50px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.logo{
+
+font-size:22px;
+
+}
+
+nav{
+
+padding:15px;
+
+flex-direction:column;
+
+}
+
+nav ul{
+
+margin-top:15px;
+
+gap:15px;
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+}
+
+.hero h1{
+
+font-size:48px;
+
+}
+
+.hero h3{
+
+font-size:24px;
+
+}
+
+.hero p{
+
+font-size:18px;
+
+}
+
+.profile{
+
+width:180px;
+
+height:180px;
+
+}
+
+.title{
+
+font-size:32px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="loader">
+
+<video id="introVideo" autoplay muted playsinline preload="auto">
+
+<source src="Yadgar-e-Ahl-e-Bait Production.mp4" type="video/mp4">
+
+</video>
+
+</div>
+
+<div class="stars"></div>
+
+<nav>
+
+<div class="logo">
+
+Ali Haider Jaffri
+
+</div>
+
+<ul>
+
+<li><a href="#">Home</a></li>
+
+<li><a href="#about">About</a></li>
+
+<li><a href="#services">Services</a></li>
+
+<li><a href="#youtube">YouTube</a></li>
+
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+</nav>
+
+<header>
+
+<div class="hero">
+
+<img src="WhatsApp Image 2026-07-01 at 2.57.23 PM.jpeg" class="profile">
+
+<h1>Ali Haider Jaffri</h1>
+
+<h3>Official Islamic Artist</h3>
+
+<p>
+
+Reciter of Nohay • Naat • Manqabat • Qasida dedicated to the love of Ahl-ul-Bait (A.S.)
+
+</p>
+
+<a href="https://www.youtube.com/@alihaiderjaffriofficial110" target="_blank" class="btn">
+
+Visit Official YouTube
+
+</a>
+
+</div>
+
+</header>
+  <!-- ABOUT -->
+
+<section id="about">
+
+<h2 class="title">About Me</h2>
+
+<div class="card">
+
+<p style="font-size:20px;line-height:2;text-align:center;">
+
+Assalam-o-Alaikum.
+
+<br><br>
+
+I am <b>Ali Haider Jaffri</b>, an Official Islamic Artist from Pakistan.
+
+I dedicate my voice to the love of the Holy Prophet Muhammad ﷺ and Ahl-ul-Bait (A.S.).
+
+I proudly recite <b>Nohay, Naat, Manqabat and Qasida</b> in religious gatherings and Islamic events.
+
+May Allah accept this humble service.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- SERVICES -->
+
+<section id="services">
+
+<h2 class="title">Islamic Services</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h2>🎤 Nohay</h2>
+
+<p>
+
+Professional Noha Recitation for Muharram Programs,
+Majalis and Religious Events.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>🤲 Naat</h2>
+
+<p>
+
+Beautiful Naat Sharif in praise of
+Hazrat Muhammad ﷺ.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>🕌 Qasida & Manqabat</h2>
+
+<p>
+
+Recitation of Qasida and Manqabat
+in honour of Ahl-ul-Bait (A.S.).
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- YOUTUBE -->
+
+<section id="youtube">
+
+<h2 class="title">
+
+Latest YouTube Channel
+
+</h2>
+
+<div class="card" style="text-align:center;">
+
+<h3 style="margin-bottom:25px;">
+
+Subscribe to my Official Channel
+
+</h3>
+
+<a
+
+href="https://www.youtube.com/@alihaiderjaffriofficial110"
+
+target="_blank"
+
+class="btn">
+
+▶ Visit YouTube
+
+</a>
+
+</div>
+
+</section>
+
+<!-- GALLERY -->
+
+<section id="gallery">
+
+<h2 class="title">
+
+Photo Gallery
+
+</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<img src="WhatsApp Image 2026-07-01 at 2.57.23 PM.jpeg"
+
+style="width:100%;border-radius:15px;">
+
+</div>
+
+<div class="card">
+
+<img src="karbala-night.png.png"
+
+style="width:100%;border-radius:15px;">
+
+</div>
+
+<div class="card">
+
+<img src="WhatsApp Image 2026-07-01 at 2.57.23 PM.jpeg"
+
+style="width:100%;border-radius:15px;">
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<h2 class="title">
+
+Contact Me
+
+</h2>
+
+<div class="card">
+
+<h3>
+
+📞 Phone
+
+</h3>
+
+<p>
+
++92 335 0431414
+
+</p>
+
+<br>
+
+<h3>
+
+📧 Email
+
+</h3>
+
+<p>
+
+alihaiderjaffri5@gmail.com
+
+</p>
+
+<br>
+
+<h3>
+
+▶ Official YouTube
+
+</h3>
+
+<p>
+
+<a
+
+href="https://www.youtube.com/@alihaiderjaffriofficial110"
+
+target="_blank"
+
+style="color:#FFD700;text-decoration:none;">
+
+Ali Haider Jaffri Official
+
+</a>
+
+</p>
+
+</div>
+
+</section>
+
+<footer>
+
+<h3 style="color:#FFD700;">
+
+Ali Haider Jaffri Official
+
+</h3>
+
+<br>
+
+<p>
+
+© 2026 All Rights Reserved
+
+</p>
+
+<br>
+
+<p>
+
+Designed By
+
+<br>
+
+<b style="color:#FFD700;">
+
+Yadgar-e-Ahl-e-Bait Production
+
+</b>
+
+</p>
+
+</footer>
+
+<style>
+
+footer{
+
+padding:50px 20px;
+
+text-align:center;
+
+background:#000;
+
+color:#bbb;
+
+border-top:1px solid rgba(255,255,255,.1);
+
+}
+
+footer h3{
+
+font-size:28px;
+
+}
+
+</style>
+  <!-- Floating WhatsApp -->
+
+<a href="https://wa.me/923350431414"
+class="whatsapp"
+target="_blank">
+
+💬
+
+</a>
+
+<style>
+
+.whatsapp{
+
+position:fixed;
+
+right:25px;
+
+bottom:25px;
+
+width:65px;
+
+height:65px;
+
+background:#25D366;
+
+border-radius:50%;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:34px;
+
+text-decoration:none;
+
+color:#fff;
+
+box-shadow:0 0 25px rgba(37,211,102,.7);
+
+transition:.4s;
+
+z-index:99999;
+
+}
+
+.whatsapp:hover{
+
+transform:scale(1.12);
+
+box-shadow:0 0 40px #25D366;
+
+}
+
+/* Golden line */
+
+.title::after{
+
+content:"";
+
+display:block;
+
+width:120px;
+
+height:4px;
+
+background:#FFD700;
+
+margin:15px auto 0;
+
+border-radius:20px;
+
+}
+
+/* Scroll Bar */
+
+::-webkit-scrollbar{
+
+width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#000;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#FFD700;
+
+border-radius:20px;
+
+}
+
+/* Fade Animation */
+
+.fade{
+
+animation:fadeIn 1.5s ease;
+
+}
+
+@keyframes fadeIn{
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+</style>
+
+<script>
+
+window.onload=function(){
+
+const loader=document.getElementById("loader");
+const video=document.getElementById("introVideo");
+
+video.play();
+
+setTimeout(function(){
+
+loader.style.opacity="0";
+
+setTimeout(function(){
+
+loader.style.display="none";
+
+video.pause();
+
+document.body.classList.add("fade");
+
+},1000);
+
+},4000);
+
+};
+
+</script>
+
+</body>
+
+</html>
 color:#fff;
 
 }
