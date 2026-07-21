@@ -21,50 +21,30 @@ font-family:'Poppins',sans-serif;
 }
 
 body{
-
-background:
-linear-gradient(rgba(0,0,0,.82),rgba(0,0,0,.82)),
-url("karbala-night.png");
-
-background-size:cover;
-background-position:center;
-background-attachment:fixed;
+background:#050505;
 color:#fff;
-
 }
 
 nav{
 
 position:fixed;
-
 top:0;
-
 left:0;
-
 width:100%;
-
 padding:18px 8%;
-
 display:flex;
-
 justify-content:space-between;
-
 align-items:center;
-
 background:rgba(0,0,0,.45);
-
 backdrop-filter:blur(15px);
-
-z-index:999;
+z-index:9999;
 
 }
 
 .logo{
 
 font-size:30px;
-
 font-weight:800;
-
 color:#FFD700;
 
 }
@@ -72,9 +52,7 @@ color:#FFD700;
 nav ul{
 
 display:flex;
-
 gap:30px;
-
 list-style:none;
 
 }
@@ -82,12 +60,8 @@ list-style:none;
 nav a{
 
 color:#fff;
-
 text-decoration:none;
-
 font-weight:600;
-
-transition:.3s;
 
 }
 
@@ -99,218 +73,64 @@ color:#FFD700;
 
 header{
 
-padding-top:140px;
-
-padding-bottom:60px;
-
+padding:130px 20px 40px;
 text-align:center;
 
 }
 
 header h1{
 
-font-size:60px;
-
+font-size:58px;
 color:#FFD700;
-
-margin-bottom:20px;
-
-text-shadow:0 0 15px gold;
+margin-bottom:10px;
 
 }
 
 header p{
 
-font-size:22px;
+font-size:20px;
+color:#ddd;
 
-color:#eee;
+}
+
+.player{
+
+max-width:1100px;
+margin:30px auto;
+padding:0 20px;
+
+}
+
+.player iframe{
+
+width:100%;
+height:620px;
+border:none;
+border-radius:20px;
+box-shadow:0 0 35px rgba(255,215,0,.25);
 
 }
 
 #videos{
 
 max-width:1300px;
-
 margin:auto;
-
-padding:60px 6%;
+padding:40px 20px 80px;
 
 display:grid;
 
-grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
 
-gap:35px;
-
-}
-
-.video-card{
-
-background:rgba(255,255,255,.08);
-
-border-radius:18px;
-
-overflow:hidden;
-
-backdrop-filter:blur(10px);
-
-transition:.4s;
-
-}
-
-.video-card:hover{
-
-transform:translateY(-8px);
-
-box-shadow:0 0 25px rgba(255,215,0,.35);
-
-}
-
-.video-card img{
-
-width:100%;
-
-display:block;
-
-}
-
-.video-card h3{
-
-padding:18px;
-
-font-size:20px;
-
-line-height:1.5;
-
-}
-
-.watch{
-
-display:block;
-
-margin:20px;
-
-padding:14px;
-
-text-align:center;
-
-background:#FFD700;
-
-color:#000;
-
-font-weight:bold;
-
-border-radius:30px;
-
-text-decoration:none;
-
-}
-
-.watch:hover{
-
-background:#fff;
+gap:30px;
 
 }
 
 .loading{
 
+font-size:28px;
+color:#FFD700;
 text-align:center;
-
-font-size:26px;
-
 padding:100px;
-
-color:#FFD700;
-
-}
-
-@media(max-width:768px){
-
-header h1{
-
-font-size:40px;
-
-}
-
-header p{
-
-font-size:18px;
-
-}
-
-nav{
-
-flex-direction:column;
-
-padding:15px;
-
-}
-
-nav ul{
-
-margin-top:15px;
-
-flex-wrap:wrap;
-
-justify-content:center;
-
-gap:15px;
-
-}
-
-}
-  #videoModal{
-
-animation:fadeIn .4s ease;
-
-}
-
-#videoModal iframe{
-
-border-radius:20px;
-
-box-shadow:0 0 40px rgba(255,215,0,.45);
-
-background:#000;
-
-}
-
-#closeVideo{
-
-transition:.3s;
-
-}
-
-#closeVideo:hover{
-
-color:#FFD700;
-
-transform:scale(1.2);
-
-}
-
-@keyframes fadeIn{
-
-from{
-
-opacity:0;
-
-}
-
-to{
-
-opacity:1;
-
-}
-
-}
-
-@media(max-width:768px){
-
-#videoModal iframe{
-
-height:250px;
-
-}
 
 }
 
@@ -332,11 +152,7 @@ Ali Haider Jaffri
 
 <li><a href="index.html">Home</a></li>
 
-<li><a href="videos.html">Videos</a></li>
-
-<li><a href="gallery.html">Gallery</a></li>
-
-<li><a href="contact.html">Contact</a></li>
+<li><a href="videos-v2.html">Videos</a></li>
 
 </ul>
 
@@ -346,33 +162,21 @@ Ali Haider Jaffri
 
 <h1>Latest Videos</h1>
 
-<p>
-
-Official YouTube Playlist
-
-</p>
+<p>Official YouTube Playlist</p>
 
 </header>
-  <!-- Featured Video Player -->
 
-<section style="max-width:1100px;margin:20px auto 50px;padding:0 20px;">
-
-<div style="background:#111;border-radius:20px;padding:20px;box-shadow:0 0 30px rgba(255,215,0,.25);">
+<div class="player">
 
 <iframe
+
 id="mainPlayer"
-width="100%"
-height="620"
-src=""
-title="Ali Haider Jaffri Official"
-frameborder="0"
-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+
 allowfullscreen>
+
 </iframe>
 
 </div>
-
-</section>
 
 <div id="videos">
 
@@ -383,148 +187,169 @@ Loading Videos...
 </div>
 
 </div>
-  <!-- Part 2 (Paste this immediately after the loading div from Part 1) -->
-
 <script>
 
-const API_KEY = "AIzaSyDA79s4F4WlSdSQIhvHrWKw7TOEzpP0K54";
+const API_KEY="AIzaSyDA79s4F4WlSdSQIhvHrWKw7TOEzpP0K54";
 
-const PLAYLIST_ID = "PLQ4-wKg7sUzM";
-
-const MAX_RESULTS = 20;
+const PLAYLIST_ID="PLQ4-wKg7sUzM";
 
 async function loadVideos(){
 
 const container=document.getElementById("videos");
 
-container.innerHTML="<div class='loading'>Loading Videos...</div>";
-
 try{
 
-const response=await fetch(
-
-`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=${MAX_RESULTS}&playlistId=${PLAYLIST_ID}&key=${API_KEY}`
-
-);
+const response=await fetch(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=20&playlistId=${PLAYLIST_ID}&key=${API_KEY}`);
 
 const data=await response.json();
 
 container.innerHTML="";
 
-if(!data.items || data.items.length===0){
+data.items.forEach((item,index)=>{
 
-container.innerHTML="<div class='loading'>No videos found.</div>";
+const title=item.snippet.title;
 
-return;
+const thumb=item.snippet.thumbnails.high.url;
+
+const videoId=item.snippet.resourceId.videoId;
+
+if(index===0){
+
+document.getElementById("mainPlayer").src=`https://www.youtube.com/embed/${videoId}`;
 
 }
 
-data.items.forEach(video=>{
-
-const title=video.snippet.title;
-
-const thumbnail=video.snippet.thumbnails.high.url;
-
-const videoId=video.snippet.resourceId.videoId;
-
 container.innerHTML+=`
 
-<div class="video-card">
+<div class="card">
 
-<img src="${thumbnail}" alt="${title}">
+<img src="${thumb}" class="thumb">
 
 <h3>${title}</h3>
 
-<a
-class="watch"
-href="#"
-onclick="loadPlayer('${videoId}');return false;">
+<button onclick="playVideo('${videoId}')">
 
-▶ Watch Video
+▶ Watch Now
 
-</a>
+</button>
 
 </div>
 
 `;
 
 });
-  // First video automatically load
 
-window.addEventListener("load",()=>{
+}catch(e){
 
-setTimeout(()=>{
-
-const first=document.querySelector(".watch");
-
-if(first){
-
-first.click();
+container.innerHTML="<div class='loading'>Unable to load videos.</div>";
 
 }
 
-},1000);
+}
+
+function playVideo(id){
+
+document.getElementById("mainPlayer").src=`https://www.youtube.com/embed/${id}?autoplay=1`;
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
 
 });
-
-}catch(error){
-
-container.innerHTML="<div class='loading'>Failed to load videos.</div>";
-
-console.log(error);
-
-}
 
 }
 
 loadVideos();
-  <script>
 
-function loadPlayer(videoId){
+</script>
 
-const player=document.getElementById("mainPlayer");
+<style>
 
-player.src="https://www.youtube.com/embed/"+videoId+"?autoplay=1";
+.card{
 
-player.scrollIntoView({
+background:rgba(255,255,255,.08);
 
-behavior:"smooth",
+border-radius:18px;
 
-block:"start"
+overflow:hidden;
 
-});
+backdrop-filter:blur(10px);
+
+transition:.35s;
 
 }
 
-</script>
+.card:hover{
 
-</script>
-  <footer style="background:#000;padding:50px 20px;text-align:center;margin-top:60px;">
+transform:translateY(-8px);
 
-<h2 style="color:#FFD700;margin-bottom:10px;">
+box-shadow:0 0 25px rgba(255,215,0,.35);
 
-Ali Haider Jaffri Official
+}
 
-</h2>
+.thumb{
 
-<p style="color:#ccc;font-size:18px;">
+width:100%;
 
+display:block;
+
+}
+
+.card h3{
+
+padding:18px;
+
+font-size:18px;
+
+line-height:1.5;
+
+}
+
+.card button{
+
+width:calc(100% - 30px);
+
+margin:0 15px 18px;
+
+padding:14px;
+
+border:none;
+
+border-radius:30px;
+
+background:#FFD700;
+
+font-weight:bold;
+
+cursor:pointer;
+
+font-size:16px;
+
+}
+
+.card button:hover{
+
+background:#fff;
+
+}
+
+</style>
+<footer style="background:#000;padding:50px 20px;text-align:center;margin-top:60px;">
+
+<h2 style="color:#FFD700;">Ali Haider Jaffri Official</h2>
+
+<p style="color:#ccc;margin-top:10px;">
 Official Islamic Artist
-
 </p>
 
-<br>
-
-<p style="color:#aaa;">
-
-📞 +92 335 0431414
-
-</p>
-
-<p style="color:#aaa;">
-
+<p style="margin-top:20px;">
 📧 alihaiderjaffri5@gmail.com
+</p>
 
+<p>
+📞 +92 335 0431414
 </p>
 
 <br>
@@ -538,38 +363,6 @@ style="display:inline-block;padding:14px 35px;background:#FFD700;color:#000;text
 
 </footer>
 
-<a href="https://wa.me/923350431414"
-target="_blank"
-style="position:fixed;right:25px;bottom:25px;width:65px;height:65px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:34px;text-decoration:none;box-shadow:0 0 20px rgba(37,211,102,.7);z-index:99999;">
-
-💬
-
-</a>
-
-</div>
-  
-player.src="";
-
-document.body.style.overflow="auto";
-
-};
-
-window.onclick=function(e){
-
-if(e.target===modal){
-
-modal.style.display="none";
-
-player.src="";
-
-document.body.style.overflow="auto";
-
-}
-
-};
-
-</script>
-  
 </body>
 
 </html>
