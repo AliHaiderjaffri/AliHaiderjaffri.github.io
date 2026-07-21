@@ -595,39 +595,25 @@ class="btn">
 
 <!-- GALLERY -->
 
-<section id="gallery">
+<section id="latest-videos">
 
-<h2 class="title">
+<h2 class="title">Latest Nohay</h2>
 
-Photo Gallery
+<div id="homeVideos" class="cards">
 
-</h2>
-
-<div class="cards">
-
-<div class="card">
-
-<img src="WhatsApp Image 2026-07-01 at 2.57.23 PM.jpeg"
-
-style="width:100%;border-radius:15px;">
+<div class="card">Loading latest videos...</div>
 
 </div>
 
-<div class="card">
+<br><br>
 
-<img src="karbala-night.png.png"
+<div style="text-align:center;">
 
-style="width:100%;border-radius:15px;">
+<a href="videos-pro.html" class="btn">
 
-</div>
+View All Videos →
 
-<div class="card">
-
-<img src="WhatsApp Image 2026-07-01 at 2.57.23 PM.jpeg"
-
-style="width:100%;border-radius:15px;">
-
-</div>
+</a>
 
 </div>
 
@@ -754,7 +740,114 @@ footer h3{
 font-size:28px;
 
 }
+#latest-videos{
 
+padding:90px 8%;
+
+text-align:center;
+
+}
+
+#homeVideos{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+margin-top:40px;
+
+}
+
+#homeVideos .card{
+
+background:rgba(255,255,255,.08);
+
+border-radius:18px;
+
+overflow:hidden;
+
+transition:.35s;
+
+cursor:pointer;
+
+box-shadow:0 0 20px rgba(255,215,0,.15);
+
+}
+
+#homeVideos .card:hover{
+
+transform:translateY(-8px);
+
+box-shadow:0 0 30px rgba(255,215,0,.35);
+
+}
+
+#homeVideos img{
+
+width:100%;
+
+display:block;
+
+}
+
+#homeVideos h3{
+
+padding:18px;
+
+font-size:18px;
+
+line-height:1.5;
+
+color:#fff;
+
+}
+
+#homeVideos .watchBtn{
+
+display:inline-block;
+
+margin:0 0 20px;
+
+padding:12px 30px;
+
+background:#FFD700;
+
+color:#000;
+
+text-decoration:none;
+
+font-weight:700;
+
+border-radius:30px;
+
+transition:.3s;
+
+}
+
+#homeVideos .watchBtn:hover{
+
+background:#fff;
+
+}
+
+@media(max-width:768px){
+
+#latest-videos{
+
+padding:60px 20px;
+
+}
+
+#homeVideos{
+
+grid-template-columns:1fr;
+
+}
+
+}
+  
 </style>
   <!-- Floating WhatsApp -->
 
@@ -910,6 +1003,61 @@ document.body.classList.add("fade");
 },4000);
 
 };
+
+</script>
+  <script>
+
+const API_KEY="AIzaSyDA79s4F4WlSdSQIhvHrWKw7TOEzpP0K54";
+
+const PLAYLIST_ID="PLQ4-wKg7sUzM";
+
+async function loadHomeVideos(){
+
+const container=document.getElementById("homeVideos");
+
+try{
+
+const res=await fetch(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${PLAYLIST_ID}&maxResults=3&key=${API_KEY}`);
+
+const data=await res.json();
+
+container.innerHTML="";
+
+data.items.forEach(item=>{
+
+const title=item.snippet.title;
+
+const thumb=item.snippet.thumbnails.high.url;
+
+container.innerHTML+=`
+
+<div class="card" onclick="location.href='videos-pro.html'">
+
+<img src="${thumb}">
+
+<h3>${title}</h3>
+
+<a class="watchBtn" href="videos-pro.html">
+
+▶ Watch Now
+
+</a>
+
+</div>
+
+`;
+
+});
+
+}catch(e){
+
+container.innerHTML="<div class='card'>Unable to load latest videos.</div>";
+
+}
+
+}
+
+loadHomeVideos();
 
 </script>
 
